@@ -1,0 +1,147 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-family: Arial;
+	padding: 0;
+	margin: 0;
+	background-color: #eee;
+}
+
+h2 {
+	color: #fff;
+	background-color: #C80000;
+	width: 100%;
+	margin: 10px 0 0 0;
+}
+
+h3 {
+	color: #f00;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #C80000;
+}
+
+a:hover {
+	color: #FF2D2D;
+}
+
+h1#header {
+	margin: 0;
+	float: left;
+}
+
+div {
+	
+}
+
+div#headerBar {
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0 10x;
+	width: 100%;
+	position: fixed;
+	background-color: #fff;
+	position: fixed;
+	width: 100%;
+}
+
+div#linkBar {
+	display: inline-block;
+}
+
+div#linkbar a {
+	text-transform: uppercase;
+	padding: 10px 5px 15px 5px;
+	color: #444;
+}
+
+div#linkbar a.active{
+	color: #C80000;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+div#linkbar a:hover {
+	color: #f00;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+div#account {
+	float: right;
+	padding: 14px 0;
+}
+
+div.container {
+	text-align: center;
+	width: 1000px;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+div#picBox {
+	left: 50px;
+}
+
+div#categoryColumn {
+	float: left;
+	width: 195px;
+}
+
+div#jokeColumn {
+	display: inline-block;
+	margin: 0 5px;
+	width: 600px;
+}
+
+div#adversationColumn {
+	float: right;
+	width: 195px;
+}
+
+div#mainContainer {
+	
+}
+
+div.contentBox {
+	padding: 10px;
+	text-align: left;
+	background-color: #fff;
+	margin: 0 auto 10px auto;
+	/*box-shadow: 2px 2px 5px #888;*/
+}
+
+div.categories p a{
+	color: #444;
+}
+
+div.categories p a.active{
+	color: #C80000;
+	border-left-style: solid;
+	padding: 0 0 0 10px;
+	margin: 0 0 0 -10px;
+}
+
+div.categories p a:hover{
+	color:#f00;
+	border-left-style: solid;
+	padding: 0 0 0 10px;
+	margin: 0 0 0 -10px;
+}
+
+input#inputTextSearch {
+	float: left;
+	width: 145px;
+}
+
+button#buttonSearch {
+	width: 30px;
+}
+
+img {
+	width:100%;
+}
