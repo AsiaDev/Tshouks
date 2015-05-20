@@ -56,4 +56,27 @@ class Model
             throw new Exception($result->error);
         }
     }
+    
+    public function executeQueryAndReturnTable($query, $attributes){
+    	$statement = ConnectionHandler::getConnection()->prepare($query);
+    	 
+    	if (!$statement->execute()) {
+    		throw new Exception($statement->error);
+    	}
+    	 
+    	$result = $statement->get_result();
+    	if (!$result) {
+    		throw new Exception($statement->error);
+    	}
+    	 
+    	$table = array();
+    	$i = 0;
+    	while ($row = $result->fetch_object()) {
+    		foreach ($attributes as $attribute){
+    			$table[$i][] = $row->$attribute;
+    		}
+    		$i+=1;
+    	}
+    	return $table;
+    }
 }

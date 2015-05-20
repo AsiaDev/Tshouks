@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Tshouks - Home</title>
-<link href="css/defaultStyle.css" rel="stylesheet" />
+<link href="view/css/defaultStyle.css" rel="stylesheet" />
 </head>
 <body>
 	<div id="headerBar">
@@ -20,4 +20,7 @@
 				<button>Sign Up</button>
 			</div>
 		</div>
+	</div>
+	<div id="picBox">
+		<img alt="lorempixel" src="http://lorempixel.com/1920/300">
 	</div>

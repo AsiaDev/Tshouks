@@ -3,10 +3,9 @@
 return array(
 
     'database' => array(
-        'host'     => 'localhost',
+        'host'     => '127.0.0.1:3307',
         'username' => 'root',
         'password' => '',
-        'database' => 'mvc',
+        'database' => 'tshouks',
     ),
-
 );

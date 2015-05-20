@@ -97,7 +97,7 @@ div#contentColumn {
 	width: 600px;
 }
 
-div#advertismentColumn {
+div#rightColumn {
 	float: right;
 	width: 195px;
 }
@@ -114,18 +114,26 @@ div.contentBox {
 	box-shadow: 0 0 3px #888;
 }
 
-div.categories p a{
+div.categories ul{
+	padding: 0;
+}
+
+div.categories ul li {
+	list-style-type: none;
+}
+
+div.categories ul li a{
 	color: #444;
 }
 
-div.categories p a.active{
+div.categories ul li a.active{
 	color: #C80000;
 	border-left-style: solid;
 	padding: 0 0 0 10px;
 	margin: 0 0 0 -10px;
 }
 
-div.categories p a:hover{
+div.categories ul li a:hover{
 	color:#f00;
 	border-left-style: solid;
 	padding: 0 0 0 10px;
@@ -167,7 +175,7 @@ img {
 		display: none;
 	}
 	
-	div#advertismentColumn{
+	div#rightColumn{
 		display: none;
 	}
 	

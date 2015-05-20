@@ -1,6 +1,6 @@
 <?php
 
-class DefaultController
+class CategoryController
 {
 	public function __construct()
 	{
@@ -8,15 +8,15 @@ class DefaultController
 		$view->display();
 	}
 
-	public function index()
+	public function index($category)
 	{
 		echo '<div id="mainContainer" class="container">';
 		
 		$catBuilder = new CategoriesBuilder();
 		echo $catBuilder;
 		
-		$view = new View('homeContent');
-		$view->display();
+		$jokesFromCategoryBuilder = new JokesFromCategoryBuilder();
+		$jokesFromCategoryBuilder->category = $category;
 		
 		$rightColumnBuilder = new RightColumnBuilder();
 		
