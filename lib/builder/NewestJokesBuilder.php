@@ -1,18 +1,20 @@
 <?php
-class JokesFromCategoryBuilder extends Builder{
+
+class NewestJokesBuilder extends Builder{
 	public function __construct(){
-		$this->addProperty('category');
 		$this->addProperty('jokes');
+		$this->addProperty('limit');
 	}
 	
 	public function build(){
-		require_once('model\JokesFromCategoryModel.php');
+		require_once('model\NewestJokesModel.php');
 		
-		$jokesFromCategoryModel = new JokesFromCategoryModel();
-		$jokes = $jokesFromCategoryModel->getAllJokesFromCategory($this->category);
+		$newestJokesModel = new NewestJokesModel();
+		$jokes = $newestJokesModel->getNewestJokes($this->limit);
 		
 		$result = '<div id="contentColumn">';
-		$result .= "<h2>{$this->category}</h2>";
+		$result .= "<h2>Newest Jokes</h2>";
+		
 		foreach ($jokes as $joke){
 			$jokeBuilder = new JokeBuilder();
 			$jokeBuilder->title = $joke[0];

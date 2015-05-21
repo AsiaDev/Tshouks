@@ -9,10 +9,11 @@ class JokeBuilder extends Builder{
 	}
 	
 	public function build(){
-		$result = "<h3>{$title}</h3>";
+		$result = "<h3>{$this->title}</h3>";
 		$result .= '<div class="contentBox">';
-		$result .= "<p>{$joke}</p>";
-		$result .= "<p>{$post_date} | posted from {$author}</p>";
+		$result .= "<p>{$this->joke}</p>";
+		$result .= "<hr/>";
+		$result .= "<p class=\"footerText\">posted from {$this->author} | {$this->post_date}</p></div>";
 		
 		return $result;
 	}

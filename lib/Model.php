@@ -59,8 +59,9 @@ class Model
     
     public function executeQueryAndReturnTable($query, $attributes){
     	$statement = ConnectionHandler::getConnection()->prepare($query);
-    	 
+    	
     	if (!$statement->execute()) {
+    		
     		throw new Exception($statement->error);
     	}
     	 

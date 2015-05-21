@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Tshouks - Home</title>
-<link href="view/css/defaultStyle.css" rel="stylesheet" />
+<link href="http://tshouks/view/css/defaultStyle.css" rel="stylesheet" />
 </head>
 <body>
 	<div id="headerBar">
@@ -10,7 +10,7 @@
 			<h1 id="header">Tshouks</h1>
 			<div id="linkBar">
 				<p>
-					<a href="#" class="active">Home</a> | <a href="#">Newest Jokes</a>
+					<a href="http://tshouks" class="active">Home</a> | <a href="http://tshouks/NewestJokes/index/5">Newest Jokes</a>
 					| <a href="#">Best Jokes</a> | <a href="#">Create new Joke</a> | <a
 						href="#">Contact</a>
 			
@@ -22,5 +22,5 @@
 		</div>
 	</div>
 	<div id="picBox">
-		<img alt="lorempixel" src="http://lorempixel.com/1920/300">
+		<img class="innerShadow" alt="lorempixel" src="http://lorempixel.com/1920/300">
 	</div>

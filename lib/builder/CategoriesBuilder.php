@@ -19,7 +19,7 @@ class CategoriesBuilder extends Builder
         $links = $catModel->getAllCategory();
         $linkBuilder->links($links);
         $result .= $linkBuilder->build();
-        $result .= '    </div></div>';
+        $result .= '</div></div>';
 
         return $result;
     }

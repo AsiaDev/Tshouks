@@ -1,12 +1,12 @@
 <VirtualHost 127.0.0.1>
-    ServerName www.mvc.local
-    ServerAlias mvc.local
+    ServerName tshouks
+    ServerAlias tshouks
     AddType text/html .shtml
     AddHandler server-parsed .shtml
     ServerAdmin webmaster@mvc.local
-    DocumentRoot "d:/dev/web/mvc"
+    DocumentRoot "d:/xampp/htdocs/tshouks"
 
-    <Directory "d:/dev/web/mvc">
+    <Directory "d:/xampp/htdocs/tshouks">
         Options Indexes FollowSymLinks
         Options +Includes
         AllowOverride All

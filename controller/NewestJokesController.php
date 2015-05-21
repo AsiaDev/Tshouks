@@ -1,29 +1,26 @@
 <?php
 
-class CategoryController
-{
-	public function __construct()
-	{
+class NewestJokesController{
+	public function __construct(){
 		$view = new View('header', array('title' => 'Startseite', 'heading' => 'Startseite'));
 		$view->display();
 	}
-
-	public function index($category)
-	{
+	
+	public function index($limit=5){
 		echo '<div id="mainContainer" class="container">';
 		
 		$catBuilder = new CategoriesBuilder();
 		echo $catBuilder;
 		
-		$jokesFromCategoryBuilder = new JokesFromCategoryBuilder();
-		$jokesFromCategoryBuilder->category = $category;
-		echo $jokesFromCategoryBuilder;
+		$newestJokesBuilder = new NewestJokesBuilder();
+		$newestJokesBuilder->limit = $limit;
+		echo $newestJokesBuilder;
 		
 		$rightColumnBuilder = new RightColumnBuilder();
 		
 		echo $rightColumnBuilder;
 	}
-
+	
 	public function __destruct()
 	{
 		$view = new View('footer');

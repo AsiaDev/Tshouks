@@ -12,6 +12,11 @@ class Dispatcher
 
 		require_once ("controller/$controllerName.php");
 		$controller = new $controllerName();
+		
+		// decode url 
+		for ($i = 0; $i < count($args); $i++){
+			$args[$i] = rawurldecode($args[$i]);
+		}
 
         call_user_func_array(array($controller, $method), $args);
 		
