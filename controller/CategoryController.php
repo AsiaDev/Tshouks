@@ -10,8 +10,6 @@ class CategoryController
 
 	public function index($category)
 	{
-		echo '<div id="mainContainer" class="container">';
-		
 		$catBuilder = new CategoriesBuilder();
 		echo $catBuilder;
 		

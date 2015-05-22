@@ -1,12 +1,12 @@
 <VirtualHost 127.0.0.1>
-    ServerName tshouks
-    ServerAlias tshouks
+    ServerName localhost
+    ServerAlias localhost
     AddType text/html .shtml
     AddHandler server-parsed .shtml
     ServerAdmin webmaster@mvc.local
-    DocumentRoot "d:/xampp/htdocs/tshouks"
+    DocumentRoot "d:/xampp/htdocs/index.php"
 
-    <Directory "d:/xampp/htdocs/tshouks">
+    <Directory "d:/xampp/htdocs/index.php">
         Options Indexes FollowSymLinks
         Options +Includes
         AllowOverride All

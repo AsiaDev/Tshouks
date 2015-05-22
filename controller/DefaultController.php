@@ -10,8 +10,6 @@ class DefaultController
 
 	public function index()
 	{
-		echo '<div id="mainContainer" class="container">';
-		
 		$catBuilder = new CategoriesBuilder();
 		echo $catBuilder;
 		

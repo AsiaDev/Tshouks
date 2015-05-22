@@ -1,10 +1,22 @@
 @CHARSET "ISO-8859-1";
 
 body {
+	color: #fff;
+	
 	font-family: Arial;
 	padding: 0;
 	margin: 0;
-	background-color: #eee;
+	background-color: #111;
+	
+	background-image: url('https://fc01.deviantart.net/fs9/i/2006/069/5/3/Dark_Squares_III_by_iAmFreeman.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+*:focus{
+	outline:none;
 }
 
 hr {
@@ -15,16 +27,24 @@ hr {
 
 p.footerText{
 	font-size: 70%;
-	color: #444;
+	color: #999;
 }
 
 h2 {
-	color: #000;
-	background-color: #fff;
+	color: #f00;
+	background-color: #222;
 	width: 100%;
 	padding: 10px 0;
 	margin: 10px 0 0 0;
-	box-shadow: 0 0 3px #888
+	box-shadow: 0 0 3px #000;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #C80000;
+	border-bottom-color: #C80000;
+}
+
+label{
+	display: none;
 }
 
 h3 {
@@ -34,6 +54,7 @@ h3 {
 	margin: 10px 0 0 0;
 	border-top-right-radius: 5px;	
 	border-top-left-radius: 5px;
+	box-shadow: 0 0 3px #f00;
 }
 
 a {
@@ -57,29 +78,31 @@ div#headerBar {
 	padding: 0 10x;
 	width: 100%;
 	position: fixed;
-	background-color: #fff;
+	background-color: #111;
 	position: fixed;
 	width: 100%;
 	box-shadow: 0 0 10px #000;
+	color: #fff;
 }
 
 div#linkBar {
 	display: inline-block;
 }
 
-div#linkbar a {
+div#linkbar p a {
+	font-size: 150%;
 	text-transform: uppercase;
 	padding: 10px 5px 15px 5px;
-	color: #444;
+	color: #f33;
 }
 
-div#linkbar a.active{
+div#linkbar p a.active{
 	color: #C80000;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
 }
 
-div#linkbar a:hover {
+div#linkbar p a:hover {
 	color: #f00;
 	border-bottom-width: 2px;
 	border-bottom-style: solid;
@@ -111,23 +134,24 @@ div#contentColumn {
 	width: 600px;
 }
 
+div#mainContainer{
+	box-shadow: 0 -50px 50px #fff;
+}
+
 div#rightColumn {
 	float: right;
 	width: 195px;
 }
 
-div#mainContainer {
-	box-shadow: 0 0 1px #000;
-}
-
 div.contentBox {
 	padding: 2px 10px;
 	text-align: left;
-	background-color: #fff;
+	background-color: #222;
 	margin: 0 auto 10px auto;
-	box-shadow: 0 0 3px #888;
+	box-shadow: 0 0 3px #000;
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px;
+	color: #fff;
 }
 
 div.categories ul{
@@ -136,10 +160,11 @@ div.categories ul{
 
 div.categories ul li {
 	list-style-type: none;
+	margin: 10px 0;
 }
 
 div.categories ul li a{
-	color: #444;
+	color: #e00;
 }
 
 div.categories ul li a.active{
@@ -151,6 +176,7 @@ div.categories ul li a.active{
 
 div.categories ul li a:hover{
 	color:#f00;
+	font-weight: bold;
 	border-left-style: solid;
 	padding: 0 0 0 10px;
 	margin: 0 0 0 -10px;
@@ -179,11 +205,57 @@ img {
 }
 
 div#picBox{
-	margin: 50px 0 0 0;
+	box-shadow: inset 0 -50px 50px 6px #000;
 }
 
-.innerShadow{
-	box-shadow: inset 0 1px 50px #000;
+div#picBox img{
+	display: block;
+	z-index: -1;
+}
+
+
+form.form{
+	width: 500px;
+	margin:0 auto;
+}
+
+form.form input{
+	width:100%;
+	height:30px;
+	margin:10px auto;
+	border-radius: 3px;
+}
+
+input[type="text"], input[type="password"]{
+	padding: 0 10px;
+	border-style: none;
+	border-bottom-style: solid;
+	border-bottom-color: #f00;
+	background-color: #333;
+	color: #fff;
+}
+
+input[type="submit"]{
+	color: white;
+	border-style: none;
+	border-radius: 3px;
+	background-color: #C80000;
+}
+
+input[type="submit"]:hover{
+	background-color: #f00;
+	box-shadow: 0 0 5px #f00;
+}
+
+input[type="submit"]:active{
+	color: white;
+	border-style: solid;
+	border-color: #f00;
+	background-color: #900;
+}
+
+input#submitSearch{
+	background-image: url('view/img/search.png');
 }
 
 @media screen and (min-width: 1050px){
@@ -193,6 +265,10 @@ div#picBox{
 @media screen and (max-width: 1050px){
 	h1#header{
 		float: none;
+	}
+	
+	div#headerBar{
+		position: absolute;
 	}
 	
 	div#categoryColumn{
@@ -208,6 +284,10 @@ div#picBox{
 	}
 	
 	div.content{
+		width:100%;
+	}
+	
+	div.container{
 		width:100%;
 	}
 }

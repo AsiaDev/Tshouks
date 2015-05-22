@@ -7,8 +7,6 @@ class NewestJokesController{
 	}
 	
 	public function index($limit=5){
-		echo '<div id="mainContainer" class="container">';
-		
 		$catBuilder = new CategoriesBuilder();
 		echo $catBuilder;
 		

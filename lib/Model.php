@@ -80,4 +80,13 @@ class Model
     	}
     	return $table;
     }
+    
+    public function executeQuery($query){
+    	$statement = ConnectionHandler::getConnection()->prepare($query);
+    	 
+    	if (!$statement->execute()) {
+    	
+    		throw new Exception($statement->error);
+    	}
+    }
 }

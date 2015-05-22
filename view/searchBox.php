@@ -1,5 +1,7 @@
 <h3>Search</h3>
 <div class="contentBox">
-	<input id="inputTextSearch" type="text" name="search">
-	<button id="buttonSearch">go</button>
+	<form action="http://tshouks/Search/Index" method="GET">
+		<input id="inputTextSearch" type="text" name="search">
+		<input type="submit" id="submitSearch" value=''>
+	</form>
 </div>
