@@ -6,3 +6,4 @@ require_once('RightColumnBuilder.php');
 require_once('JokeBuilder.php');
 require_once('JokesFromCategoryBuilder.php');
 require_once('NewestJokesBuilder.php');
+require_once('CreateNewJokeBuilder.php');

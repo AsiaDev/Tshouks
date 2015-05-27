@@ -227,6 +227,7 @@ form.form input{
 }
 
 input[type="text"], input[type="password"]{
+	width:100%;
 	padding: 0 10px;
 	border-style: none;
 	border-bottom-style: solid;
