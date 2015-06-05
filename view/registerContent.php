@@ -2,15 +2,15 @@
 	<h2>Register</h2>
 	<h3>Register</h3>
 	<div class="contentBox">
-		<p>Geben Sie die geforderten Daten ein und bestätigen Sie mit
+		<p>Geben Sie die geforderten Daten ein und bestÃ¤tigen Sie mit
 			"Registrieren" um ein neues Konto anzulegen.</p>
 			
-		<script src="http://tshouks/view/js/md5.js"></script>
-		<script src="http://tshouks/view/js/utf8_encode.js"></script>
-		<script src="http://tshouks/view/js/validateRegisterData.js"></script>
+		<script src="http://btabib.dev.bbc-projects.ch/view/js/md5.js"></script>
+		<script src="http://btabib.dev.bbc-projects.ch/view/js/utf8_encode.js"></script>
+		<script src="http://btabib.dev.bbc-projects.ch/view/js/validateRegisterData.js"></script>
 		
-		<form action="http://tshouks/Register/Submit" method="post"
-			class="form" id="loginForm" onsubmit="validateRegisterData()" target="_blank">
+		<form action="http://btabib.dev.bbc-projects.ch/Register/Submit" method="post"
+			class="form" id="loginForm" onsubmit="validateRegisterData()">
 				<label for="username">Benutzername</label> 
 				<input type="text" name="username" placeholder="Benutzername"> 
 				

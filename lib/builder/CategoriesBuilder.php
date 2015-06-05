@@ -10,11 +10,11 @@ class CategoriesBuilder extends Builder
     public function build()
     {
     	$result = '<div id="categoryColumn">';
-    	$result .= '<h3>Categories</h3>';
+    	$result .= '<h3>Kategorien</h3>';
         $result .= 	'<div class="categories contentBox">';
         $linkBuilder = new LinkListBuilder();
         
-        require_once('/model/CategoryModel.php');
+        require_once('./model/CategoryModel.php');
         $catModel = new CategoryModel();
         $links = $catModel->getAllCategory();
         $linkBuilder->links($links);

@@ -3,26 +3,22 @@ class RegisterController{
 	
 	public function __construct()
 	{
-		$view = new View('header', array('title' => 'Startseite', 'heading' => 'Startseite'));
+		$view = new View('header', array('title' => 'Registrieren'));
 		$view->display();
+		
+		$catBuilder = new CategoriesBuilder();
+		echo $catBuilder;
 	}
 	
 	public function index(){
-		$catBuilder = new CategoriesBuilder();
-		echo $catBuilder;
 		
 		$view = new View('registerContent');
 		$view->display();
-		
-		$rightColumnBuilder = new RightColumnBuilder();
-		echo $rightColumnBuilder;
 	}
 	
 	public function submit(){
-		$catBuilder = new CategoriesBuilder();
-		echo $catBuilder;
 		
-		require_once('model/UserModel.php');
+		require_once('./model/UserModel.php');
 		$userModel = new UserModel();
 		
 		$allUsers = $userModel->getAllUsers();
@@ -40,14 +36,23 @@ class RegisterController{
 			// create this new user
 			$userModel->createUser($_POST['username'], $_POST['_password']);
 			echo "user created";
+			header("Location: http://btabib.dev.bbc-projects.ch/Login");
 		}
-		
-		$rightColumnBuilder = new RightColumnBuilder();
-		echo $rightColumnBuilder;
+		else{
+			header("Location: http://btabib.dev.bbc-projects.ch/Register/Failure");
+		}
+
+	}
+	
+	public function failure(){
+		$messageBuilder = new MessageBuilder();
+		$messageBuilder->registerFailedUsedUsername();
 	}
 	
 	public function __destruct()
 	{
+		$rightColumnBuilder = new RightColumnBuilder();
+		echo $rightColumnBuilder;
 		$view = new View('footer');
 		$view->display();
 	}

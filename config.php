@@ -3,9 +3,9 @@
 return array(
 
     'database' => array(
-        'host'     => '127.0.0.1:3307',
-        'username' => 'root',
-        'password' => '',
-        'database' => 'tshouks',
+        'host'     => 'localhost',
+        'username' => 'btabibsql1',
+        'password' => 'Welcome$15',
+        'database' => 'btabibsql1',
     ),
 );

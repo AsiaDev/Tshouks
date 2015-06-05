@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+error_reporting(0);
+
 require_once('lib/Dispatcher.php');
 require_once('lib/View.php');
 require_once('lib/Model.php');

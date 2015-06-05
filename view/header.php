@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Tshouks - Home</title>
-<link href="http://tshouks/view/css/defaultStyle.css" rel="stylesheet" />
+<title><?php echo "Tshouks - {$title}";?></title>
+<link href="http://btabib.dev.bbc-projects.ch/view/css/defaultStyle.css" rel="stylesheet" />
 <link rel="icon" type="image/vnd.microsoft.icon"
 	href="view/img/favicon-tshouks.png" />
+	<meta charset="UTF-8">
 </head>
 <body>
 	<div id="headerBar">
 		<div class="container">
-			<h1 id="header">Tshouks</h1>
+			<a href="http://btabib.dev.bbc-projects.ch" title="Zurück zur Homepage"><h1 id="header">Tshouks</h1></a>
 			<div id="linkBar">
 				<p>
-					<a href="http://tshouks" class="active">Home</a> | <a
-						href="http://tshouks/NewestJokes/index/5">Newest Jokes</a> | <a
-						href="#">Best Jokes</a> | <a href="http://tshouks/CreateNewJoke">Create
-						new Joke</a> | <a href="#">Contact</a>
+					<a href="http://btabib.dev.bbc-projects.ch/NewestJokes/index?limit=20&offset=0">Neuste Witze</a> | <a
+						href="http://btabib.dev.bbc-projects.ch/CreateNewJoke">Erstelle einen Witz</a> | <a
+						href="http://btabib.dev.bbc-projects.ch/Default/Contact">Kontakt</a>
 				</p>
 
 			</div>
-			<div id="account">
-				<a href="http://tshouks/Login/index">Log In</a> or <a
-					href="http://tshouks/Register/index">Register</a>
-			</div>
+			<?php
+			include ('./lib/builder/AccountBoxBuilder.php');
+			?>
 		</div>
 	</div>
 	<div id="picBox">
-		<img class="innerShadow" alt="lorempixel"
-			src="http://lorempixel.com/1920/300">
+		<img alt="back ground header image"
+			src="http://btabib.dev.bbc-projects.ch/view/img/headerPicture.jpg">
 	</div>
 
 	<div id="mainContainer">

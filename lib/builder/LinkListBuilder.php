@@ -12,7 +12,7 @@ class LinkListBuilder extends Builder
         $result  = 	'<ul class="form-group">';
          
         foreach ($this->links as $href) {
-        	$result .= "<li><a href=\"http://tshouks/Category/index/{$href[0]}\">{$href[0]}</a></li>";
+        	$result .= "<li><a href=\"http://btabib.dev.bbc-projects.ch/Category/index/{$href[0]}?+limit=20&offset=0\">{$href[0]}</a></li>";
         }
         $result .= '    </ul>';
 

@@ -9,6 +9,11 @@ function validateRegisterData(){
 		return false;
 	}
 	
+	if (password.value.length < 8){
+		alert("Das Passwort muss mindestens 8 Zeichen enthalten");
+		return false;
+	}
+	
 	_password.value = md5(password.value);
 	password.value = '';
 	

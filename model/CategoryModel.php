@@ -9,6 +9,6 @@ class CategoryModel extends Model
     public function getAllCategory() {    	
     	$query = "SELECT category FROM $this->tableName";
     	
-    	return parent::executeQueryAndReturnTable($query, array('category'));
+    	return parent::executeQueryAndReturnTable($query, array('category'), false);
     }
 }

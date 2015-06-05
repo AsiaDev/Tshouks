@@ -3,7 +3,7 @@ class LoginController{
 	
 	public function __construct()
 	{
-		$view = new View('header', array('title' => 'Startseite', 'heading' => 'Startseite'));
+		$view = new View('header', array('title' => 'Anmelden'));
 		$view->display();
 	}
 	
@@ -22,7 +22,7 @@ class LoginController{
 		$catBuilder = new CategoriesBuilder();
 		echo $catBuilder;
 		
-		require_once('model/UserModel.php');
+		require_once('./model/UserModel.php');
 		$userModel = new UserModel();
 		
 		if ($userModel->getUserPassword($_POST['username'])[0][0] == $_POST['_password']){
@@ -31,13 +31,20 @@ class LoginController{
 			$_SESSION['loggedIn'] = true;
 			$_SESSION['username'] = $_POST['username'];
 			
+			header('Location: http://btabib.dev.bbc-projects.ch/');
+			
 		}
 		else{
-			echo "login failed";
+			header ("Location: http://btabib.dev.bbc-projects.ch/Login/failed");
 		}
 		
 		$rightColumnBuilder = new RightColumnBuilder();
 		echo $rightColumnBuilder;
+	}
+	
+	public function failed(){
+		$messageBuilder = new MessageBuilder();
+		$messageBuilder->loginFailedWrongPassword();
 	}
 	
 	public function __destruct()

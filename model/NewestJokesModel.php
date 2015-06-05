@@ -2,13 +2,12 @@
 require_once('lib/Model.php');
 
 class NewestJokesModel extends Model{
-	public function getNewestJokes($limit=5){
-		$query = "SELECT j.title, j.joke, j.post_date, u.username 
-				FROM JOKE AS j 
-				LEFT JOIN USER AS u 
+	public function getNewestJokes(){
+		$query = "SELECT j.ID_joke,  j.joke, j.post_date, u.username 
+				FROM joke AS j 
+				LEFT JOIN user AS u 
 				ON u.ID_user = j.author_ID 
-				ORDER BY j.post_date DESC
-				LIMIT {$limit}";
-		return parent::executeQueryAndReturnTable($query, array('title', 'joke', 'post_date', 'username'));
+				ORDER BY j.post_date DESC";
+		return parent::executeQueryAndReturnTable($query, array('ID_joke', 'joke', 'post_date', 'username'));
 	}
 }

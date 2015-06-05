@@ -2,26 +2,23 @@
 
 class NewestJokesController{
 	public function __construct(){
-		$view = new View('header', array('title' => 'Startseite', 'heading' => 'Startseite'));
+		$view = new View('header', array('title' => 'Neuste Witze'));
 		$view->display();
-	}
-	
-	public function index($limit=5){
 		$catBuilder = new CategoriesBuilder();
 		echo $catBuilder;
-		
+	}
+	
+	public function index(){
 		$newestJokesBuilder = new NewestJokesBuilder();
-		$newestJokesBuilder->limit = $limit;
 		echo $newestJokesBuilder;
-		
-		$rightColumnBuilder = new RightColumnBuilder();
-		
-		echo $rightColumnBuilder;
 	}
 	
 	public function __destruct()
 	{
+		$rightColumnBuilder = new RightColumnBuilder();
+		echo $rightColumnBuilder;
 		$view = new View('footer');
 		$view->display();
 	}
+	
 }
